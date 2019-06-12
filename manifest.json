@@ -9,31 +9,7 @@
     "theme_color": "#5eace0",
     "icons": [{
         "src": "book-32.png",
-        "sizes": "32x32",
+        "sizes": "54x53",
         "type": "image/png"
-    }, {
-        "src": "book-72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-    }, {
-        "src": "book-128.png",
-        "sizes": "128x128",
-        "type": "image/png"
-    }, {
-        "src": "book-144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-    }, {
-        "src": "book-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }, {
-        "src": "book-256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-    }, {
-        "src": "book-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-    }]
+    }, ]
 }
