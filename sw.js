@@ -1,4 +1,3 @@
-
 var cacheName = 'bs-0-2-0';
 var cacheFiles = [
     '/',
