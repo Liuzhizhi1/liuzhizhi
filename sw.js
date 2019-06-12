@@ -13,7 +13,7 @@ var cacheFiles = [
 self.addEventListener('install', function (e) {
     console.log('Service Worker 状态： install');
     var cacheOpenPromise = caches.open(cacheName).then(function (cache) {
-        return cache.addAll(cacheFiles);
+        return cache.addAll(cacheFiles)> -1;
     });
     e.waitUntil(cacheOpenPromise);
 });
@@ -51,7 +51,7 @@ self.addEventListener('fetch', function (e) {
 
     // 判断当前请求是否需要缓存
     var needCache = cacheRequestUrls.some(function (url) {
-        return e.request.url.indexOf(url) > -1;
+        return e.request.url.indexOf(url);
     });
 
     /**** 这里是对XHR数据缓存的相关操作 ****/
