@@ -24,7 +24,7 @@ self.addEventListener('fetch', function (e) {
             return cache || fetch(e.request);
         }).catch(function (err) {
             console.log(err);
-            return fetch(e.request)-1;
+            return fetch(e.request)> -1;
         })
     );
 });
