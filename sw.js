@@ -1,8 +1,12 @@
+// sw.js
 var cacheName = 'bs-0-2-0';
 var cacheFiles = [
     '/',
     './index.html',
-    './index.js'
+    './index.js',
+    './style.css',
+    './img/book.png',
+    './img/loading.svg'
 ];
 
 // 监听install事件，安装完成后，进行文件缓存
@@ -37,8 +41,6 @@ self.addEventListener('activate', function (e) {
     e.waitUntil(cachePromise);
     return self.clients.claim();
 });
-
-// sw.js
 var apiCacheName = 'api-0-1-1';
 self.addEventListener('fetch', function (e) {
     // 需要缓存的xhr请求
@@ -79,41 +81,4 @@ self.addEventListener('fetch', function (e) {
         );
     }
 });
-function getApiDataFromCache(url) {
-    if ('caches' in window) {
-        return caches.match(url).then(function (cache) {
-            if (!cache) {
-                return;
-            }
-            return cache.json();
-        });
-    }
-    else {
-        return Promise.resolve();
-    }
-}
-function queryBook() {
-    // ……
-    // 远程请求
-    var remotePromise = getApiDataRemote(url);
-    var cacheData;
-    // 首先使用缓存数据渲染
-    getApiDataFromCache(url).then(function (data) {
-        if (data) {
-            loading(false);
-            input.blur();            
-            fillList(data.books);
-            document.querySelector('#js-thanks').style = 'display: block';
-        }
-        cacheData = data || {};
-        return remotePromise;
-    }).then(function (data) {
-        if (JSON.stringify(data) !== JSON.stringify(cacheData)) {
-            loading(false);                
-            input.blur();
-            fillList(data.books);
-            document.querySelector('#js-thanks').style = 'display: block';
-        }
-    });
-    // ……
-}
+
