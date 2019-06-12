@@ -1,7 +1,7 @@
 {
     "name": "test",
     "short_name": "book",
-    "start_url": "/",
+    "start_url": "https://liuzhizhi1.github.io/liuzhizhi/pwa.html",
     "display": "standalone",
     "background_color": "#333",
     "description": "like WebAPP(me)",
