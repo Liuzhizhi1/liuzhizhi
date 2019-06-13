@@ -36,7 +36,7 @@
         "sizes": "515x515",
         "type": "image/png"
     }]
-  "related_applications": [{
+  "related_applications":[{
     "platform": "web",
     "url": "https://liuzhizhi1.github.io/liuzhizhi/pwa.html"
   }]
