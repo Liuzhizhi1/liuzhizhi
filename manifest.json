@@ -1,6 +1,6 @@
 {
-    "name": "test",
-    "short_name": "book",
+    "name": "小胡",
+    "short_name": "小可爱",
     "start_url": "https://liuzhizhi1.github.io/liuzhizhi/pwa.html",
     "display": "standalone",
     "background_color": "#333",
